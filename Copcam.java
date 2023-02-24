@@ -1,11 +1,7 @@
 /*
  * Esta es la clase secundaria donde se encuentran los de Copcam
  */
-public abstract class Copcam extends Personaje{
+public interface Copcam{
 
-	public Copcam(String nombre) {
-		
-		super(nombre, "Copcam");
-
-	}
+	
 }

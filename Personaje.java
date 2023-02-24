@@ -1,13 +1,17 @@
 /*
 * ESTA ES LA CLASE PRINCIPAL DE DONDE DERIVAN TODOS LOS PERSONAJES
  */
-public abstract class Personaje {
+public interface Personaje {
 	
-	String nombre;
-	String tipo;
 
+		int vida=100;
+		boolean defendiendo = false;
 
-	public Personaje(String nombre, String tipo){
+		public void atacar(Personaje p);
+		public void usarObjeto(ObjetoEspecial o);
+		
+
+	/*public Personaje(String nombre, String tipo){
 		this.nombre = nombre;
 		this.tipo = tipo;
 	}	
@@ -28,6 +32,6 @@ public abstract class Personaje {
 	public void usarObjeto(ObjetoEspecial o){
 		poderAtaque += o.getAtaque();
 		poderDefensa += o.getDefensa();
-	}
+	}*/
 	
 }

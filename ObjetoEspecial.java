@@ -1,16 +1,7 @@
-public abstract class ObjetoEspecial {
+public interface ObjetoEspecial {
 		
-		private int ataque;
-		private int defensa; 
+		int ataque=0;
+		int vida=0; 
 
-		public ObjetoEspecial(String nombre, int ataque , int defensa) {
-			this.ataque = ataque;
-			this.defensa = defensa;
-		}
-		public int getAtaque() {
-			return this.ataque;
-		}
-		public int getDefensa() {
-			return this.defensa;
-		}
+		
 	}
