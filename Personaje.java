@@ -10,6 +10,6 @@ public interface Personaje {
 	public int getDanio();
 	public int getVida();
 	public Boolean getDefensa();
-		
+	public String getNombre();
 	
 }

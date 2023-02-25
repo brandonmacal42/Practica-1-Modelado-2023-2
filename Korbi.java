@@ -14,17 +14,17 @@ public class Korbi implements Personaje, HabilidadKorbi, PoderesNientiendo {
 
 	Random random = new Random();
 	public void atacar(Personaje personaje) {
-		String enemigo = personaje.nombre;
+		String enemigo = personaje.getNombre();
 		int vidaEnemigo = personaje.getVida();
 
-		if (personaje.defendiendo == false) {
+		if (personaje.getDefensa() == false) {
 			// Generamos valor random de ataque
 			int ataque = random.nextInt(danio);
 			personaje.setVida((vidaEnemigo - ataque));
 			ultimaAccion = ("Korbi ha hecho " + ataque + " de danio a " + enemigo + ". ");
 		} else {
 			// reducimos la probabilidad del danio de ataque al 50%
-			int ataque = ataque * .5;
+			int ataque = (int)(danio * .5);
 			ataque = random.nextInt(danio);
 			ultimaAccion = ("Korbi ha intentado atacar a " + enemigo + " mientras se defendia, " + enemigo + "Recibe " + ataque + " de danio. ");
 			personaje.setVida((vidaEnemigo - ataque));
@@ -63,7 +63,7 @@ public class Korbi implements Personaje, HabilidadKorbi, PoderesNientiendo {
 
 	// Habilidad especial por empresa
 	public void replicaAtaque(Personaje personaje) {
-		if (this.empresa.equals(personaje.empresa)) {
+		if (this.empresa.equals(personaje.getEmpresa())) {
 			// Pertenecen a la misma empresa
 			this.danio = personje.danio;
 			ultimaAccion = ("Korbi ha replciado el ataque de " + personaje.nombre);
@@ -98,4 +98,10 @@ public class Korbi implements Personaje, HabilidadKorbi, PoderesNientiendo {
 		return ultimaAccion;
 	}
 	
-}
+	public String getNombre () {
+		return this.nombre;
+	}
+	public String getEmpresa () {
+		return this.empresa;
+	}
+}	
