@@ -7,8 +7,7 @@ public class Observador implements Observer{
 		
 	}
 
-	public void update(String id, String mensaje) {
-		this.userId = id;
+	public void update(String mensaje) {
 		this.mensaje = mensaje;
 		display();
 	}

@@ -21,7 +21,7 @@ public class Escenario implements Simulacion{
 	public void notifyObserver() {
 		for (int i = 0; i < observers.size(); i++) {
 			Observador o = (Observador) observers.get(i);
-			o.update(o.userId, null);
+			o.update(null);
 		}
 
 	}

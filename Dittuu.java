@@ -14,17 +14,17 @@ public class Dittuu implements Personaje {
 
 	Random random = new Random();
 	public void atacar(Personaje personaje) {
-		String enemigo = personaje.nombre;
+		String enemigo = personaje.getNombre();
 		int vidaEnemigo = personaje.getVida();
 		
-		if (personaje.defendiendo == false) {
+		if (personaje.setDefensa() == false) {
 			// Generamos valor random de ataque
 			int ataque = random.nextInt(danio);
 			personaje.setVida((vidaEnemigo - ataque));
 			ultimaAccion = ("Dittuu ha hecho " + ataque + " de danio a " + enemigo + ". ");
 		} else {
 			// reducimos la probabilidad del danio de ataque al 50%
-			int ataque = ataque * .5;
+			int ataque = (int) (danio * .5);
 			ataque = random.nextInt(danio);
 			personaje.setVida((vidaEnemigo - ataque));
 			ultimaAccion = ("Dittuu ha intentado atacar a " + enemigo + " mientras se defendia, " + enemigo + "Recibe " + ataque + " de danio. ");
@@ -63,12 +63,11 @@ public class Dittuu implements Personaje {
 
 	// Habilidad especial por empresa
 	public void trasnformarse(Personaje personaje) {
-		if (this.empresa.equals(personaje.empresa)) {
+		if (this.empresa.equals(personaje.getEmpresa())) {
 			// Pertenecen a la misma empresa
-			ultimaAccion = ("Dittu ha copiado la apariencia de  " + personaje.nombre);
+			ultimaAccion = ("Dittu ha copiado la apariencia de  " + personaje.getNombre());
 		}
 	}
-
 	public int getVida () {
 		return vida;
 	}
@@ -95,6 +94,17 @@ public class Dittuu implements Personaje {
 
 	public String notifica () {
 		return ultimaAccion;
+	}
+	
+	public String getNombre () {
+		return this.nombre;
+	}
+	public String getEmpresa () {
+		return this.empresa;
+	}
+
+	public void modificaStadisticas() {
+		throw new UnsupportedOperationException("Unimplemented method 'modificaStadisticas'");
 	}
 
 }

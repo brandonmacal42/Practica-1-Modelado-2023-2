@@ -1,3 +1,3 @@
 public interface Observer {
-	public void update(String id, String mensaje);
+	public void update(String mensaje);
 }

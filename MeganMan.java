@@ -14,17 +14,17 @@ public class MeganMan implements Personaje {
 
 	Random random = new Random();
 	public void atacar(Personaje personaje) {
-		String enemigo = personaje.nombre;
+		String enemigo = personaje.getNombre();
 		int vidaEnemigo = personaje.getVida();
 
-		if (personaje.defendiendo == false) {
+		if (personaje.setDefensa() == false) {
 			// Generamos valor random de ataque
 			int ataque = random.nextInt(danio);
 			personaje.setVida((vidaEnemigo - ataque));
 			ultimaAccion = ("MeganMan ha hecho " + ataque + " de danio a " + enemigo + ". ");
 		} else {
 			// reducimos la probabilidad del danio de ataque al 50%
-			int ataque = ataque * .5;
+			int ataque = (int) (danio * .5);
 			ataque = random.nextInt(danio);
 			ultimaAccion = ("MeganMan ha intentado atacar a " + enemigo + " mientras se defendia, " + enemigo + "Recibe " + ataque + " de danio. ");
 			personaje.setVida((vidaEnemigo - ataque));
@@ -63,10 +63,10 @@ public class MeganMan implements Personaje {
 
 	// Habilidad especial por empresa
 	public void replicaHabilidades(Personaje personaje) {
-		if (this.empresa.equals(personaje.empresa)) {
+		if (this.empresa.equals(personaje.getEmpresa())) {
 			// Pertenecen a la misma empresa
-			this.danio = personje.danio;
-			ultimaAccion = ("MeganMan ha replciado las habilidades de " + personaje.nombre);
+			this.danio = personaje.getDanio();
+			ultimaAccion = ("MeganMan ha replciado las habilidades de " + personaje.getNombre());
 		}
 	}
 
@@ -98,4 +98,14 @@ public class MeganMan implements Personaje {
 		return ultimaAccion;
 	}
 	
+	public String getNombre () {
+		return this.nombre;
+	}
+	public String getEmpresa () {
+		return this.empresa;
+	}
+
+	public void modificaStadisticas() {
+		throw new UnsupportedOperationException("Unimplemented method 'modificaStadisticas'");
+	}
 }
