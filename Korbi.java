@@ -65,8 +65,8 @@ public class Korbi implements Personaje, HabilidadKorbi, PoderesNientiendo {
 	public void replicaAtaque(Personaje personaje) {
 		if (this.empresa.equals(personaje.getEmpresa())) {
 			// Pertenecen a la misma empresa
-			this.danio = personje.danio;
-			ultimaAccion = ("Korbi ha replciado el ataque de " + personaje.nombre);
+			this.danio = personaje.getDanio();
+			ultimaAccion = ("Korbi ha replciado el ataque de " + personaje.getNombre());
 		}
 	}
 

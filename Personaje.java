@@ -11,5 +11,5 @@ public interface Personaje {
 	public int getVida();
 	public Boolean getDefensa();
 	public String getNombre();
-	
+	public String getEmpresa();
 }
