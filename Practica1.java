@@ -1,4 +1,4 @@
-import java.util.*;
+/*import java.util.*;
 import java.lang.Thread;
 public class Practica1 {
 
@@ -39,5 +39,5 @@ public class Practica1 {
 	 	}
 	 }
 
-	}	
+	}	*/
 

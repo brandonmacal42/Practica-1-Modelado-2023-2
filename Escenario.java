@@ -1,42 +1,42 @@
-/**
- * Escenario
- */
-public class Escenario{
+import java.util.ArrayList;
 
-	Personaje personaje1 ;
-	Personaje personaje2 ;
-	Personaje personaje3 ;
+public class Escenario implements Simulacion{
 
-	// //SIMULACION
-	// public void simulacion() {
-	// 	throw new UnsupportedOperationException("Unimplemented method 'simulacion'");
-	// }
-	// public String generaHistoria() {
-	// 	throw new UnsupportedOperationException("Unimplemented method 'generaHistoria'");
-	// }
+	Personaje korbi = new Korbi() ;
 
-	// public Personaje getWinner() {
-	// 	throw new UnsupportedOperationException("Unimplemented method 'getWinner'");
-	// }
-	// public void notifyObserver() {
-	// 	throw new UnsupportedOperationException("Unimplemented method 'notifyObserver'");
-	// }
+		ArrayList<Observador> observers = new ArrayList<>();
 
-	//OBSERVER
-	public void registraEvento()	{
-
-	}
-	public void generaHistoria()	{
-
-	}
-
-	public String getGanador(){
-		return null;
-		
-	}
 	
-	//Jugabilidad
-	public void generaObjeto(ObjetoEspecial o){
+	public void simula() {
+		
+	}	
+	
+	public Personaje registraObservador(Observador o) {
+		observers.add(o);
+		return o.;
+	}
+
+	public void notifyObserver() {
+		for (int i = 0; i < observers.size(); i++) {
+			Observador o = (Observador) observers.get(i);
+			o.update(o.userId, null);
+		}
+
+	}
+	public void setStatus(String status) {
 		
 	}
+
+	public String getStatus() {
+
+	}
+
+	public String generaHistoria(){
+
+	}
+
+	public Personaje getWinner(){
+		
+	}
+
 }

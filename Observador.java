@@ -1,15 +1,19 @@
 public class Observador implements Observer{
 
 	String userId;
-
-	Personaje personaje;
-
-	public String update() {
-		throw new UnsupportedOperationException("Unimplemented method 'update'");
-	}
+	String mensaje;
 
 	public void generaBitacora(){
 		
+	}
+
+	public void update(String id, String mensaje) {
+		this.userId = id;
+		this.mensaje = mensaje;
+		display();
+	}
+	public void display() {
+		System.out.println(mensaje);
 	}
 	
 }

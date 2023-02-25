@@ -3,6 +3,8 @@
  */
 public class Korbi implements Nientiendo, Personaje{
 
+	boolean defendiendo;
+	
 	public void atacar(Personaje p) {
 		throw new UnsupportedOperationException("Unimplemented method 'atacar'");
 	}
@@ -17,6 +19,11 @@ public class Korbi implements Nientiendo, Personaje{
 
 	public void replicaAtaque(Personaje p) {
 			
+	}
+
+	@Override
+	public void recibeDaño() {
+		throw new UnsupportedOperationException("Unimplemented method 'recibeDaño'");
 	}
 	
 	
