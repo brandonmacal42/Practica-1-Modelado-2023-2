@@ -5,11 +5,11 @@ public interface Personaje {
 
 	public void atacar(Personaje personaje);
 	public void setVida (int vida);
-	public void setDefensa(Boolean defensa);
+	public Boolean setDefensa();
 	public void setDanio(int danio);
 	public int getDanio();
 	public int getVida();
-	public Boolean getDefensa();
+	public void getDefensa(Boolean defensa);
 	public String getNombre();
 	public String getEmpresa();
 }
