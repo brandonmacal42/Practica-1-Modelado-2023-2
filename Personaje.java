@@ -12,4 +12,5 @@ public interface Personaje {
 	public void getDefensa(Boolean defensa);
 	public String getNombre();
 	public String getEmpresa();
+	public String notifica();
 }

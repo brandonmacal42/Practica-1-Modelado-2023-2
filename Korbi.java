@@ -30,6 +30,7 @@ public class Korbi implements Personaje, HabilidadKorbi, PoderesNientendo {
 			personaje.setVida((vidaEnemigo - ataque));
 			// throw new UnsupportedOperationException("Unimplemented method 'atacar'");
 		}
+		personaje.getDefensa(false);
 	}
 
 	// uso de objetos
