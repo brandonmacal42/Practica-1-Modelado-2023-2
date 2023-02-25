@@ -2,12 +2,14 @@ import java.util.ArrayList;
 
 public class Escenario implements Simulacion{
 
+
+
 	Personaje korbi = new Korbi() ;
 
 		ArrayList<Observador> observers = new ArrayList<>();
 
 	
-	public void simula() {
+	public static void simula() {
 		
 	}	
 	
@@ -37,6 +39,9 @@ public class Escenario implements Simulacion{
 
 	public Personaje getWinner(){
 		
+	}
+	public static void main(String[] args) {
+		simula();
 	}
 
 }

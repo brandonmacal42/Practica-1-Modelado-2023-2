@@ -3,8 +3,12 @@
  */
 public interface Personaje {
 	
-		public void atacar(Personaje p);
-		public void recibeDaño();
+	String nombre = null;
+	boolean defendiendo = false;
+
+	public void atacar(Personaje personaje);
+
+	public int getVida();
 		
 	
 }
