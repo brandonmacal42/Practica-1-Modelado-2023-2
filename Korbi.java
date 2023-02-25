@@ -2,7 +2,7 @@ import java.util.Random;
 /*
  * Esta es la clase terciaria que deriva de Nientiendo
  */
-public class Korbi implements Personaje, HabilidadKorbi, PoderesNientiendo {
+public class Korbi implements Personaje, HabilidadKorbi, PoderesNientendo {
 
 	public String nombre = "Korbi";
 	public int vida = 100;
@@ -17,7 +17,7 @@ public class Korbi implements Personaje, HabilidadKorbi, PoderesNientiendo {
 		String enemigo = personaje.getNombre();
 		int vidaEnemigo = personaje.getVida();
 
-		if (personaje.getDefensa() == false) {
+		if (personaje.setDefensa() == false) {
 			// Generamos valor random de ataque
 			int ataque = random.nextInt(danio);
 			personaje.setVida((vidaEnemigo - ataque));
@@ -33,7 +33,7 @@ public class Korbi implements Personaje, HabilidadKorbi, PoderesNientiendo {
 	}
 
 	// uso de objetos
-	public void consumeCoCoExplosivo() {
+	public void consumeCocoExplosivo() {
 		if (vida < 70) {
 			vida += 30; 
 			ultimaAccion = ("Korbi ha consumido Coco Explosivo, la vida actual de Korbi ha aumentado a " + vida);
@@ -51,7 +51,7 @@ public class Korbi implements Personaje, HabilidadKorbi, PoderesNientiendo {
 		}
 	}
 
-	public void consumeSombreroGigante() {
+	public void consumeSombreroMagico() {
 		if (danio < 50 && vida < 70) {
 			danio += 20; 
 			vida += 30;
@@ -104,4 +104,11 @@ public class Korbi implements Personaje, HabilidadKorbi, PoderesNientiendo {
 	public String getEmpresa () {
 		return this.empresa;
 	}
+
+	public void modificaStadisticas() {
+		throw new UnsupportedOperationException("Unimplemented method 'modificaStadisticas'");
+	}
+
+	
+	
 }	
